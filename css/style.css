@@ -436,6 +436,24 @@ a:hover {
   grid-area: meta;
   display: grid;
   gap: 0.35rem;
+  justify-items: start;
+}
+
+.hero-portrait {
+  margin: 0 0 0.35rem;
+  width: min(148px, 42vw);
+  border: 2px solid var(--text);
+  background: var(--surface);
+  box-shadow: 6px 6px 0 var(--accent);
+  overflow: hidden;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 196px;
+  object-fit: cover;
+  object-position: 50% 18%;
 }
 
 @media (min-width: 768px) {
@@ -449,6 +467,7 @@ a:hover {
 
   .hero-header-meta {
     text-align: right;
+    justify-items: end;
     align-self: end;
     padding-bottom: 0.5rem;
   }
@@ -819,6 +838,48 @@ a:hover {
 
 .panel p {
   margin: 0 0 0.85rem;
+}
+
+.about-layout {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.about-portrait {
+  margin: 0;
+  width: min(220px, 100%);
+  border: 2px solid var(--text);
+  background: var(--surface);
+  box-shadow: 8px 8px 0 var(--accent);
+  overflow: hidden;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: 50% 16%;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .about-layout {
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-portrait {
+    width: 100%;
+  }
+
+  .about-portrait img {
+    height: 260px;
+  }
 }
 
 .muted {
